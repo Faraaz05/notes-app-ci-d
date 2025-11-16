@@ -41,4 +41,13 @@ jobs:
     - name: Push Docker images
       run: docker compose -f docker-compose.yml push
 
+
+    - name: Trigger Render backend deploy
+      run: |
+        curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_BACKEND }}
+
+    - name: Trigger Render frontend deploy
+      run: |
+          curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_FRONTEND }}
+
       
