@@ -17,13 +17,14 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+      VITE_API_URL: "https://notes-backend-c4zt.onrender.com"
     container_name: notes-frontend
     image: faraaz2005/notes-frontend:latest
     ports:
       - "3000:80"
     # env_file:
     #   - ./frontend/.env
-    args:
-      VITE_API_URL: "https://notes-backend-c4zt.onrender.com"
+    
     restart: unless-stopped
 
