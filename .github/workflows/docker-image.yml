@@ -26,6 +26,7 @@ jobs:
         npm ci
         npm test -- --watchAll=false
         env:
+        NODE_ENV: test
         MONGODB_TEST_URI: ${{ secrets.MONGODB_TEST_URI }}
 
 
