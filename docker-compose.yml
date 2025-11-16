@@ -6,6 +6,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: notes-backend
+    image: faraaz2005/notes-backend:latest 
     ports:
       - "5000:5000"
     env_file:
@@ -17,6 +18,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     container_name: notes-frontend
+    image: faraaz2005/notes-frontend:latest
     ports:
       - "3000:80"
     env_file:
