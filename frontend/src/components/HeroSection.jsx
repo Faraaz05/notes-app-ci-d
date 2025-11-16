@@ -82,10 +82,10 @@ const HeroSection = () => {
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
-                { label: 'Active Users', value: '10K+' },
-                { label: 'Notes Created', value: '1M+' },
-                { label: 'Teams', value: '500+' },
-                { label: 'Countries', value: '50+' },
+                  { label: 'Response Time', value: '<100ms' },
+                  { label: 'Uptime', value: '99.9%' },
+                  { label: 'Cloud Sync', value: 'Real-time' },
+                  { label: 'Storage', value: 'Unlimited' },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
