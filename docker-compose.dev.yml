@@ -9,8 +9,8 @@ services:
     image: faraaz2005/notes-backend:latest 
     ports:
       - "5000:5000"
-    # env_file:
-    #   - ./backend/.env
+    env_file:
+      - ./backend/.env
     restart: unless-stopped
 
   frontend:
@@ -21,7 +21,7 @@ services:
     image: faraaz2005/notes-frontend:latest
     ports:
       - "3000:80"
-    # env_file:
-    #   - ./frontend/.env
+    env_file:
+      - ./frontend/.env
     restart: unless-stopped
 
