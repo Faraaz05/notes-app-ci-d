@@ -18,7 +18,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-      VITE_API_URL: "https://notes-backend-c4zt.onrender.com"
+        VITE_API_URL: "https://notes-backend-c4zt.onrender.com"
     container_name: notes-frontend
     image: faraaz2005/notes-frontend:latest
     ports:
