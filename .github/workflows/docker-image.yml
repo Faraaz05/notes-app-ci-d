@@ -21,11 +21,12 @@ jobs:
         node-version: 25.2.0
 
     - name: Install backend dependencies and run tests
+    
       run: |
         cd backend
         npm ci
         npm test -- --watchAll=false
-        env:
+      env:
         NODE_ENV: test
         MONGODB_TEST_URI: ${{ secrets.MONGODB_TEST_URI }}
 
