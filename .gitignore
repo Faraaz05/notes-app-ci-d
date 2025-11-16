@@ -25,4 +25,4 @@ Thumbs.db
 # Docker (keep Dockerfiles, ignore override)
 docker-compose.override.yml
 
-.github
+.github/copilot-instructions.md
