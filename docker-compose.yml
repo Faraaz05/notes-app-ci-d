@@ -23,5 +23,7 @@ services:
       - "3000:80"
     # env_file:
     #   - ./frontend/.env
+    args:
+      VITE_API_URL: "https://notes-backend-c4zt.onrender.com"
     restart: unless-stopped
 
