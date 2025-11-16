@@ -15,3 +15,6 @@ uploads/
 
 # Database files (if using local MongoDB)
 data/
+
+# Jest storage
+jest-storage
