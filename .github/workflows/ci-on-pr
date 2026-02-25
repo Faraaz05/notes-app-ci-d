@@ -1,0 +1,32 @@
+name: CI - Pull Request Validation
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 25.2.0
+
+      - name: Install Backend Dependencies
+        run: |
+          cd backend
+          npm ci
+
+      - name: Run Backend Tests
+        run: |
+          cd backend
+          npm test -- --watchAll=false
+        env:
+          NODE_ENV: test
+          MONGODB_TEST_URI: ${{ secrets.MONGODB_TEST_URI }}
